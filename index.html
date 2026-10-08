@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Louis Joseph | Full-Stack Software Developer</title>
+<meta name="description" content="Louis Joseph is a full-stack software developer building web and mobile applications with React, Node.js and React Native. Explore his work as an interactive digital documentary.">
+<meta name="theme-color" content="#0a1424">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Louis Joseph | Full-Stack Software Developer">
+<meta property="og:description" content="An interactive digital documentary: web, mobile, design, data, support and real projects.">
+<meta property="og:image" content="assets/images/louis-portrait.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1424'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23d4af5f'%3ELJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="mode-normal">
+<a class="skip" href="#about">Skip to content</a>
+
+<!-- ============ SITE HEADER (normal mode) ============ -->
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#intro" aria-label="Louis Joseph, home"><span class="brand-mark">LJ</span><span class="brand-name">Louis Joseph</span></a>
+  <nav class="main-nav" id="mainNav" aria-label="Main">
+    <a href="#intro" data-nav="intro">Home</a>
+    <a href="#about" data-nav="about">About</a>
+    <a href="#web" data-nav="web,industries">Web</a>
+    <a href="#mobile" data-nav="mobile">Mobile</a>
+    <a href="#design" data-nav="design">UI/UX</a>
+    <a href="#data" data-nav="data">Data</a>
+    <a href="#research" data-nav="research">Research</a>
+    <a href="#support" data-nav="support">Support</a>
+    <a href="#services" data-nav="services">Services</a>
+    <a href="#devops" data-nav="devops">DevOps</a>
+    <a href="#emran" data-nav="emran,projects">Projects</a>
+    <a href="#journey" data-nav="journey">Journey</a>
+    <a href="#contact" data-nav="contact" class="nav-cta">Contact</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+</header>
+
+<main id="scenes">
+
+<!-- ================= SCENE: INTRO ================= -->
+<section class="scene scene-intro" id="intro" data-chapter="Prologue">
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+  <div class="intro-inner">
+    <p class="intro-kicker rv" style="--d:.2s">Interactive digital documentary</p>
+    <h1 class="intro-name" id="introName" aria-label="Louis Joseph">Louis Joseph</h1>
+    <p class="intro-role rv" style="--d:1.3s">Full-Stack Software Developer</p>
+    <p class="intro-line rv" style="--d:1.7s"><span>Web</span><i></i><span>Mobile</span><i></i><span>Digital solutions</span><i></i><span>Technology</span></p>
+    <div class="intro-actions rv" style="--d:2.2s">
+      <button class="btn btn-primary btn-play" data-act="play"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="currentColor"/></svg>Play documentary</button>
+      <a class="btn btn-ghost" href="#about">Explore website</a>
+    </div>
+    <p class="intro-hint rv" style="--d:2.6s">Press Space to play or pause. F for fullscreen.</p>
+  </div>
+</section>
+
+<!-- ================= SCENE: ABOUT ================= -->
+<section class="scene scene-about" id="about" data-chapter="Who is Louis?">
+  <div class="wrap about-grid">
+    <div class="about-left">
+      <div class="portrait rv" style="--d:.1s"><img src="assets/images/louis-portrait.jpg" alt="Portrait of Louis Joseph" width="427" height="476"></div>
+      <h2 class="h2 rv" style="--d:.25s">A developer who builds the whole thing.</h2>
+      <p class="lead rv" style="--d:.4s">From the screen people tap to the server behind it. Websites, mobile apps and the support that keeps them running.</p>
+      <ul class="stats rv" style="--d:.55s">
+        <li><b><span class="count" data-to="3" data-suffix="+">0</span></b><span>years building web and mobile apps</span></li>
+        <li><b><span class="count" data-to="500" data-suffix="+">0</span></b><span>members on the EMRAN platform</span></li>
+        <li><b><span class="count" data-to="1300" data-suffix="+" data-sep="1">0</span></b><span>hours of full-stack training</span></li>
+        <li><b><span class="count" data-to="500" data-suffix="+">0</span></b><span>hours of UI/UX training</span></li>
+      </ul>
+    </div>
+    <div class="eco rv" style="--d:.3s" aria-label="Technology ecosystem">
+      <div class="eco-group" style="--g:0"><h3>Languages</h3><p><span>JavaScript (ES6+)</span><span>TypeScript</span></p></div>
+      <div class="eco-group" style="--g:1"><h3>Frontend</h3><p><span>React.js</span><span>Redux</span><span>HTML5</span><span>CSS3</span><span>Tailwind CSS</span><span>Bootstrap</span><span>Material UI</span><span>Styled-Components</span></p></div>
+      <div class="eco-group" style="--g:2"><h3>Backend</h3><p><span>Node.js</span><span>Express.js</span><span>REST APIs</span></p></div>
+      <div class="eco-group" style="--g:3"><h3>Databases</h3><p><span>MongoDB</span><span>PostgreSQL</span></p></div>
+      <div class="eco-group" style="--g:4"><h3>Mobile</h3><p><span>React Native</span><span>Expo</span></p></div>
+      <div class="eco-group" style="--g:5"><h3>DevOps and cloud</h3><p><span>Git</span><span>GitHub</span><span>Docker</span><span>Vercel</span><span>Render</span><span>Netlify</span><span>Heroku</span><span>AWS / Azure fundamentals</span></p></div>
+      <div class="eco-group" style="--g:6"><h3>Testing</h3><p><span>Jest</span><span>Cypress</span></p></div>
+      <div class="eco-group" style="--g:7"><h3>Design</h3><p><span>Figma</span><span>FigJam</span><span>Wireframing</span><span>Prototyping</span><span>UX research</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCENE: WEB ================= -->
+<section class="scene scene-web" id="web" data-chapter="The web">
+  <div class="wrap split">
+    <div class="copy">
+      <h2 class="h2 rv" style="--d:.05s">Interfaces people enjoy using.</h2>
+      <p class="lead rv" style="--d:.2s">Navigation, forms, carts and dashboards, built from scratch with React, CSS and JavaScript. Everything on the right is a demo I designed for this page.</p>
+    </div>
+    <div class="stage rv" data-stage style="--d:.3s">
+      <div class="stage-tabs" role="tablist" aria-label="Web demos">
+        <button role="tab" data-s="0">Business site</button>
+        <button role="tab" data-s="1">Online store</button>
+        <button role="tab" data-s="2">Member portal</button>
+        <button role="tab" data-s="3">Responsive</button>
+      </div>
+      <div class="stage-view">
+        <span class="demo-tag">Demo content</span>
+
+        <!-- Panel: business site -->
+        <div class="panel" data-s="0">
+          <div class="mock"><div class="mock-bar"><i></i><i></i><i></i><span class="url">harborpine.example</span></div>
+            <div class="site s-biz">
+              <div class="s-nav"><b>Harbor &amp; Pine</b><span>Home</span><span class="dd">Services <em>▾</em><span class="dd-menu"><a>Advisory</a><a>Training</a><a>Audits</a></span></span><span>About</span><button>Contact</button></div>
+              <div class="s-hero"><div><h4>Clear advice for growing businesses</h4><p>Plain-language guidance, from first idea to steady growth.</p><button class="s-btn">Book a call</button></div><div class="s-art"><i></i><i></i><i></i></div></div>
+              <div class="s-cards"><div><b>Advisory</b><span>Plans that fit</span></div><div><b>Training</b><span>Teams that learn</span></div><div><b>Audits</b><span>No surprises</span></div></div>
+              <div class="s-dots"><i class="on"></i><i></i><i></i></div>
+              <div class="toast">✓ Message sent</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: store -->
+        <div class="panel" data-s="1">
+          <div class="mock"><div class="mock-bar"><i></i><i></i><i></i><span class="url">lumengoods.example</span></div>
+            <div class="site s-shop">
+              <div class="s-nav"><b>Lumen Goods</b><span>New</span><span>Home</span><span>Office</span><span class="search">Search…</span><span class="cart">Cart <em class="badge">2</em></span></div>
+              <div class="s-filters"><span class="on">All</span><span>Lighting</span><span>Storage</span><span>Textiles</span></div>
+              <div class="s-products">
+                <div class="prod"><i style="--h:42"></i><b>Desk lamp</b><span>₦6,500</span><button>Add</button></div>
+                <div class="prod"><i style="--h:18"></i><b>Storage box</b><span>₦3,500</span><button class="pulse">Add</button></div>
+                <div class="prod"><i style="--h:205"></i><b>Throw pillow</b><span>₦4,200</span><button>Add</button></div>
+                <div class="prod"><i style="--h:150"></i><b>Wall clock</b><span>₦5,100</span><button>Add</button></div>
+              </div>
+              <div class="s-pay"><span>Secure checkout</span><b>Pay ₦9,900</b></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: member portal -->
+        <div class="panel" data-s="2">
+          <div class="mock"><div class="mock-bar"><i></i><i></i><i></i><span class="url">members.example</span></div>
+            <div class="site s-portal">
+              <div class="login">
+                <b>Welcome back</b>
+                <label>Email<span class="field">member@example.com</span></label>
+                <label>Password<span class="field">••••••••••</span></label>
+                <button class="s-btn full">Sign in</button>
+                <small>Forgot password?</small>
+              </div>
+              <div class="dash">
+                <div class="dash-top"><b>Dashboard</b><span class="avatar">M</span></div>
+                <div class="dash-cards">
+                  <div><small>Dues status</small><b class="chip chip-ok">Paid</b></div>
+                  <div><small>Next event</small><b>Saturday meeting</b></div>
+                  <div><small>Notices</small><b>3 new</b></div>
+                </div>
+                <div class="dash-bar"><span style="--w:72%"></span></div>
+                <div class="modal"><b>Confirm payment</b><span>Annual dues</span><button class="s-btn">Confirm</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: responsive -->
+        <div class="panel" data-s="3">
+          <div class="resp">
+            <div class="rf desk"><i class="rtop"></i><div class="rgrid"><b></b><b></b><b></b><b></b><b></b><b></b></div><span>Desktop</span></div>
+            <div class="rf tab"><i class="rtop"></i><div class="rgrid"><b></b><b></b><b></b><b></b></div><span>Tablet</span></div>
+            <div class="rf pho"><i class="rtop"></i><div class="rgrid"><b></b><b></b><b></b></div><span>Phone</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCENE: INDUSTRIES ================= -->
+<section class="scene scene-industries" id="industries" data-chapter="Every industry">
+  <div class="wrap">
+    <div class="copy center">
+      <h2 class="h2 rv" style="--d:.05s">One skill. Many industries.</h2>
+      <p class="lead rv" style="--d:.2s">Concepts of what I can build. These are examples, not a client list.</p>
+    </div>
+  </div>
+  <div class="marquee rv" style="--d:.35s" aria-label="Website concepts across industries">
+    <div class="marquee-row">
+      <div class="marquee-track">
+        <article class="ind" style="--h:42"><i></i><b>Business</b><span>Company profile with services and enquiry form</span></article>
+        <article class="ind" style="--h:160"><i></i><b>Associations</b><span>Member directory, dues and notices</span></article>
+        <article class="ind" style="--h:18"><i></i><b>E-commerce</b><span>Catalogue, cart and secure checkout</span></article>
+        <article class="ind" style="--h:205"><i></i><b>Education</b><span>Course pages and student sign-in</span></article>
+        <article class="ind" style="--h:178"><i></i><b>Health and professional services</b><span>Appointment booking and service pages</span></article>
+        <article class="ind" style="--h:215"><i></i><b>Home services</b><span>Quotes, gallery and call-now buttons</span></article>
+        <article class="ind" style="--h:310"><i></i><b>Community groups</b><span>News, events and announcements</span></article>
+        <article class="ind" style="--h:35"><i></i><b>Personal brands</b><span>Portfolio, story and contact</span></article>
+        <article class="ind" style="--h:128"><i></i><b>Nonprofits</b><span>Campaign pages and donations</span></article>
+        <article class="ind" style="--h:268"><i></i><b>Events</b><span>Schedules, tickets and reminders</span></article>
+        <article class="ind" style="--h:195"><i></i><b>Online services</b><span>Sign-up, subscription and support</span></article>
+        <article class="ind" style="--h:80"><i></i><b>Water and manufacturing</b><span>Product range, distribution and orders</span></article>
+        <!-- duplicate set for seamless loop (hidden from assistive tech) -->
+        <article class="ind" style="--h:42" aria-hidden="true"><i></i><b>Business</b><span>Company profile with services and enquiry form</span></article>
+        <article class="ind" style="--h:160" aria-hidden="true"><i></i><b>Associations</b><span>Member directory, dues and notices</span></article>
+        <article class="ind" style="--h:18" aria-hidden="true"><i></i><b>E-commerce</b><span>Catalogue, cart and secure checkout</span></article>
+        <article class="ind" style="--h:205" aria-hidden="true"><i></i><b>Education</b><span>Course pages and student sign-in</span></article>
+        <article class="ind" style="--h:178" aria-hidden="true"><i></i><b>Health and professional services</b><span>Appointment booking and service pages</span></article>
+        <article class="ind" style="--h:215" aria-hidden="true"><i></i><b>Home services</b><span>Quotes, gallery and call-now buttons</span></article>
+        <article class="ind" style="--h:310" aria-hidden="true"><i></i><b>Community groups</b><span>News, events and announcements</span></article>
+        <article class="ind" style="--h:35" aria-hidden="true"><i></i><b>Personal brands</b><span>Portfolio, story and contact</span></article>
+        <article class="ind" style="--h:128" aria-hidden="true"><i></i><b>Nonprofits</b><span>Campaign pages and donations</span></article>
+        <article class="ind" style="--h:268" aria-hidden="true"><i></i><b>Events</b><span>Schedules, tickets and reminders</span></article>
+        <article class="ind" style="--h:195" aria-hidden="true"><i></i><b>Online services</b><span>Sign-up, subscription and support</span></article>
+        <article class="ind" style="--h:80" aria-hidden="true"><i></i><b>Water and manufacturing</b><span>Product range, distribution and orders</span></article>
+      </div>
+    </div>
+  </div>
+  <p class="foot-note center rv" style="--d:.5s">Concept previews. Real projects are in the Projects chapter.</p>
+</section>
+
+<!-- ================= SCENE: MOBILE ================= -->
+<section class="scene scene-mobile" id="mobile" data-chapter="Mobile">
+  <div class="wrap split">
+    <div class="copy">
+      <h2 class="h2 rv" style="--d:.05s">Beyond the browser.</h2>
+      <p class="lead rv" style="--d:.2s">Apps built with React Native and Expo: sign-in, commerce, notifications and ad-supported revenue. I published Campusify for Android on Google Play.</p>
+      <div class="stage-tabs vertical rv" style="--d:.35s" data-stage-tabs="mobileStage" role="tablist" aria-label="App screens">
+        <button role="tab" data-s="0">Onboarding</button>
+        <button role="tab" data-s="1">Sign in</button>
+        <button role="tab" data-s="2">Home and commerce</button>
+        <button role="tab" data-s="3">Monetisation</button>
+        <button role="tab" data-s="4">Profile and alerts</button>
+      </div>
+    </div>
+    <div class="stage phones rv" id="mobileStage" data-stage style="--d:.3s">
+      <span class="demo-tag">Concept screens</span>
+      <div class="phone phone-ghost" aria-hidden="true">
+        <div class="phone-screen"><div class="ps ps-home"><div class="ps-head"><b>Discover</b></div><div class="ps-row"><i></i><div><b>Study desk</b><span>₦18,000</span></div></div><div class="ps-row"><i></i><div><b>Lab coat</b><span>₦7,500</span></div></div><div class="ps-row"><i></i><div><b>Scientific calculator</b><span>₦9,200</span></div></div></div></div>
+      </div>
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="ps panel" data-s="0"><div class="ps-hero"><i></i></div><h5>Shop smarter on campus</h5><p>Find what you need from sellers near you.</p><div class="ps-dots"><i class="on"></i><i></i><i></i></div><button class="ps-btn">Get started</button></div>
+          <div class="ps panel" data-s="1"><h5>Sign in</h5><label>Email<span class="field">you@example.com</span></label><label>Password<span class="field">••••••••</span></label><button class="ps-btn">Continue</button><small>Create an account</small></div>
+          <div class="ps panel" data-s="2"><div class="ps-search">Search products</div><div class="ps-chips"><span class="on">All</span><span>Books</span><span>Fashion</span><span>Tech</span></div><div class="ps-row"><i></i><div><b>Study desk</b><span>₦18,000</span></div><u>+</u></div><div class="ps-row"><i></i><div><b>Lab coat</b><span>₦7,500</span></div><u>+</u></div><div class="ps-row"><i></i><div><b>Headphones</b><span>₦11,400</span></div><u>+</u></div></div>
+          <div class="ps panel" data-s="3"><div class="ps-row"><i></i><div><b>Study desk</b><span>₦18,000</span></div></div><div class="ps-ad"><small>Sponsored</small><b>Banner ad slot</b></div><div class="ps-row"><i></i><div><b>Lab coat</b><span>₦7,500</span></div></div><div class="ps-reward"><b>Watch a short video</b><span>Unlock a free boost</span></div></div>
+          <div class="ps panel" data-s="4"><div class="ps-avatar">A</div><h5>Ada O.</h5><div class="ps-note"><b>Order shipped</b><span>2 minutes ago</span></div><div class="ps-note"><b>New message</b><span>1 hour ago</span></div><div class="ps-note"><b>Price drop</b><span>Yesterday</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCENE: DESIGN ================= -->
+<section class="scene scene-design" id="design" data-chapter="Design">
+  <div class="wrap split split-wide">
+    <div class="copy">
+      <h2 class="h2 rv" style="--d:.05s">From a rough idea to a finished screen.</h2>
+      <p class="lead rv" style="--d:.2s">500+ hours of remote UI/UX product design training: design thinking, wireframing, prototyping and usability testing in Figma, FigJam, Maze and Jira.</p>
+    </div>
+    <div class="stage rv" data-stage style="--d:.3s">
+      <div class="stage-tabs flow" role="tablist" aria-label="Design process">
+        <button role="tab" data-s="0">Idea and research</button><button role="tab" data-s="1">Wireframe</button><button role="tab" data-s="2">Prototype</button><button role="tab" data-s="3">Interface</button><button role="tab" data-s="4">Product</button>
+      </div>
+      <div class="stage-view">
+        <span class="demo-tag">Example process</span>
+        <div class="panel" data-s="0"><div class="notes"><div class="note n1"><b>Who is it for?</b><span>Retired members who want one place for their account.</span></div><div class="note n2"><b>What hurts today?</b><span>Hard to see what is paid and what is due.</span></div><div class="note n3"><b>What is success?</b><span>Check status in under 10 seconds.</span></div></div></div>
+        <div class="panel" data-s="1"><div class="screen wire"><div class="w-top">Header</div><div class="w-row"><div>Status card</div><div>Notices</div><div>Events</div></div><div class="w-wide">Payment history</div></div></div>
+        <div class="panel" data-s="2"><div class="screen wire proto"><div class="w-top">Header</div><div class="w-row"><div class="hot">Status card<em>tap</em></div><div>Notices</div><div>Events</div></div><div class="w-wide">Payment history</div><svg class="flow-arrow" viewBox="0 0 120 60" aria-hidden="true"><path d="M5 5 C60 5 60 55 112 52" /><path d="M104 46 L113 52 L104 58"/></svg></div></div>
+        <div class="panel" data-s="3"><div class="screen ui"><div class="u-top"><b>Member portal</b><span class="avatar">M</span></div><div class="u-row"><div><small>Dues status</small><b class="chip chip-ok">Paid</b></div><div><small>Notices</small><b>3 new</b></div><div><small>Next event</small><b>Saturday</b></div></div><div class="u-wide"><small>Payment history</small><div class="u-line"><i></i><i></i><i></i></div></div></div></div>
+        <div class="panel" data-s="4"><div class="build"><pre aria-label="Example React code"><code>function StatusCard({ paid }) {
+  return (
+    &lt;Card&gt;
+      &lt;h3&gt;Dues status&lt;/h3&gt;
+      &lt;Chip ok={paid}&gt;
+        {paid ? "Paid" : "Due"}
+      &lt;/Chip&gt;
+    &lt;/Card&gt;
+  );
+}</code></pre><div class="screen ui mini"><div class="u-row"><div><small>Dues status</small><b class="chip chip-ok">Paid</b></div></div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCENE: DATA ================= -->
+<section class="scene scene-data" id="data" data-chapter="Data">
+  <div class="wrap">
+    <div class="copy row-head">
+      <div>
+        <h2 class="h2 rv" style="--d:.05s">Data that explains itself.</h2>
+        <p class="lead rv" style="--d:.2s">Spreadsheets turned into tables, charts and summaries you can read at a glance.</p>
+      </div>
+      <span class="demo-tag static">Demo data</span>
+    </div>
+    <div class="stage dash-data rv" data-stage style="--d:.3s">
+      <div class="stage-tabs" role="tablist" aria-label="Filter by category">
+        <button role="tab" data-s="0">All products</button><button role="tab" data-s="1">Beverages</button><button role="tab" data-s="2">Stationery</button><button role="tab" data-s="3">Electronics</button><button role="tab" data-s="4">Home</button>
+      </div>
+      <div class="kpis" id="dataKpis">
+        <div class="kpi"><small>Revenue</small><b id="kRev">₦0</b></div>
+        <div class="kpi"><small>Units sold</small><b id="kQty">0</b></div>
+        <div class="kpi"><small>Orders</small><b id="kOrd">0</b></div>
+        <div class="kpi"><small>Average order</small><b id="kAvg">₦0</b></div>
+      </div>
+      <div class="charts">
+        <div class="card chart"><small>Revenue by location</small><div class="bars" id="barChart"></div></div>
+        <div class="card chart"><small>Revenue by month</small><svg id="lineChart" viewBox="0 0 300 120" preserveAspectRatio="none" aria-label="Revenue by month line chart"></svg><div class="months" id="lineMonths"></div></div>
+        <div class="card sheet"><div class="sheet-scroll"><table id="sheet"><thead><tr class="cols"><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th></tr><tr class="hdr"><th>1</th><th>Date</th><th>Product</th><th>Category</th><th>Qty</th><th>Revenue</th><th>Location</th><th>Customer</th></tr></thead><tbody id="sheetBody"></tbody></table></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCENE: RESEARCH ================= -->
+<section class="scene scene-research" id="research" data-chapter="Research">
+  <div class="wrap split">
+    <div class="copy">
+      <h2 class="h2 rv" style="--d:.05s">Questions in. Clear answers out.</h2>
+      <p class="lead rv" style="--d:.2s">Gathering information, comparing options and turning it into findings you can act on. This is a sample of how I organise it.</p>
+    </div>
+    <div class="stage rv" data-stage style="--d:.3s">
+      <div class="stage-tabs" role="tablist" aria-label="Research steps">
+        <button role="tab" data-s="0">Sources</button><button role="tab" data-s="1">Compare</button><button role="tab" data-s="2">Findings</button><button role="tab" data-s="3">Summary</button>
+      </div>
+      <div class="stage-view light">
+        <span class="demo-tag">Sample research</span>
+        <div class="topic"><small>Topic</small><b>Which membership tool suits a small association?</b></div>
+        <div class="panel" data-s="0">
+          <ul class="sources">
+            <li><span>Official documentation</span><i style="--w:92%"></i></li>
+            <li><span>Pricing page</span><i style="--w:84%"></i></li>
+            <li><span>Independent review</span><i style="--w:70%"></i></li>
+            <li><span>User community thread</span><i style="--w:52%"></i></li>
+            <li><span>Comparison blog</span><i style="--w:44%"></i></li>
+          </ul>
+          <p class="cap">Sources ranked by how much they can be trusted.</p>
+        </div>
+        <div class="panel" data-s="1">
+          <table class="compare"><thead><tr><th></th><th>Option A</th><th>Option B</th><th>Option C</th></tr></thead><tbody>
+            <tr><td>Member records</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><td>Online payments</td><td class="y">Yes</td><td class="n">No</td><td class="y">Yes</td></tr>
+            <tr><td>Easy for non-technical staff</td><td class="n">No</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><td>Monthly cost</td><td>Low</td><td>Low</td><td>Medium</td></tr>
+          </tbody></table>
+        </div>
+        <div class="panel" data-s="2">
+          <div class="insights"><div><b>Payments decide it</b><span>Only two options collect dues online.</span></div><div><b>Ease beats features</b><span>Staff turnover favours a simple tool.</span></div><div><b>Cost is not the gap</b><span>Prices are close. Setup effort differs.</span></div></div>
+        </div>
+        <div class="panel" data-s="3">
+          <div class="summary"><b>Sample recommendation</b><p>Option C fits best: it takes payments and is simple to run. Next, confirm the price for 500 members and test the sign-up flow.</p><ul><li>Confirm yearly price</li><li>Trial the sign-up flow</li><li>Check data export options</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCENE: SUPPORT ================= -->
+<section class="scene scene-support" id="support" data-chapter="Problem solving">
+  <div class="wrap split">
+    <div class="copy">
+      <h2 class="h2 rv" style="--d:.05s">Technology is not only about building. It is also about solving problems.</h2>
+      <p class="lead rv" style="--d:.2s">I started in technical customer support, writing bug reports and documentation across time zones. Today I still support the platforms I build.</p>
+    </div>
+    <div class="stage support-board rv" data-stage style="--d:.3s">
+      <span class="demo-tag">Sample tickets</span>
+      <ul class="tickets" aria-label="Sample support tickets">
+        <li class="active" id="tk1042"><b>#1042</b><span>Login problem</span><em class="chip" id="tk1042chip">Investigating</em></li>
+        <li id="tk1043"><b>#1043</b><span>Email configuration</span><em class="chip chip-ok">Resolved</em></li>
+        <li id="tk1044"><b>#1044</b><span>Website update</span><em class="chip chip-warn">In progress</em></li>
+      </ul>
+      <div class="ticket-detail">
+        <div class="stage-tabs flow" role="tablist" aria-label="Support steps">
+          <button role="tab" data-s="0">Problem</button><button role="tab" data-s="1">Investigation</button><button role="tab" data-s="2">Diagnosis</button><button role="tab" data-s="3">Solution</button><button role="tab" data-s="4">Documentation</button>
+        </div>
+        <div class="td-body">
+          <div class="panel" data-s="0"><b>A member cannot sign in after resetting a password.</b><span>Reported by email. Error: "Invalid or expired link".</span></div>
+          <div class="panel" data-s="1"><b>Reproduce it, then read the logs.</b><span>Checked the reset email, the link timing and the account status.</span></div>
+          <div class="panel" data-s="2"><b>The reset link expired before it was used.</b><span>The account itself was fine.</span></div>
+          <div class="panel" data-s="3"><b>Sent a fresh link and confirmed the sign-in.</b><span>The member is back in and the ticket is closed.</span></div>
+          <div class="panel" data-s="4"><b>Wrote it up so the next one is faster.</b><span>Added a short how-to for expired reset links.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCENE: SERVICES ================= -->
+<section class="scene scene-services" id="services" data-chapter="Virtual and personal assistance">
+  <div class="wrap split">
+    <div class="copy">
+      <h2 class="h2 rv" style="--d:.05s">Remote help for everyday digital tasks.</h2>
+      <p class="lead rv" style="--d:.2s">Beyond code, I offer remote administrative and personal assistance.</p>
+      <ul class="svc stage" data-stage>
+        <li data-s="0"><span class="ic">✈</span><div><b>Travel planning</b><small>Flights, hotels, itineraries</small></div></li>
+        <li data-s="1"><span class="ic">🛒</span><div><b>Online shopping research</b><small>Products, prices, reviews</small></div></li>
+        <li data-s="2"><span class="ic">▤</span><div><b>Administrative support</b><small>Forms, data entry, scheduling</small></div></li>
+        <li data-s="3"><span class="ic">✉</span><div><b>Email management</b><small>Inbox, drafts, follow-ups</small></div></li>
+        <li data-s="4"><span class="ic">🗂</span><div><b>Document management</b><small>PDFs, merging, filing</small></div></li>
+        <li data-s="5"><span class="ic">★</span><div><b>Personal assistance</b><small>Events, reservations, gift ideas</small></div></li>
+        <li data-s="6"><span class="ic">🔎</span><div><b>Research services</b><small>Comparisons, reports</small></div></li>
+        <li data-s="7"><span class="ic">🖥</span><div><b>Tech and online support</b><small>Accounts, portals, cloud storage</small></div></li>
+      </ul>
+    </div>
+    <figure class="flyer rv" style="--d:.3s"><img src="assets/images/services-flyer.jpg" alt="Flyer: Virtual and Personal Assistant services offered remotely by Louis Joseph" loading="lazy" width="1000" height="1000"></figure>
+  </div>
+</section>
+
+<!-- ================= SCENE: DEVOPS ================= -->
+<section class="scene scene-devops" id="devops" data-chapter="Shipping">
+  <div class="wrap">
+    <div class="copy center">
+      <h2 class="h2 rv" style="--d:.05s">Code that ships reliably.</h2>
+      <p class="lead rv" style="--d:.2s">My day-to-day workflow, and the cloud skills I am growing next.</p>
+    </div>
+    <div class="stage pipeline rv" data-stage style="--d:.3s">
+      <ol class="pipe">
+        <li data-s="0"><i>{ }</i><b>Code</b></li>
+        <li data-s="1"><i>⑂</i><b>Git</b></li>
+        <li data-s="2"><i>⚙</i><b>Build</b></li>
+        <li data-s="3"><i>✓</i><b>Test</b></li>
+        <li data-s="4"><i>▣</i><b>Container</b></li>
+        <li data-s="5"><i>↑</i><b>Deploy</b></li>
+        <li data-s="6"><i>☁</i><b>Cloud</b></li>
+        <li data-s="7"><i>◔</i><b>Monitor</b></li>
+      </ol>
+      <div class="pipe-detail">
+        <p class="panel" data-s="0">JavaScript and TypeScript across the frontend and backend.</p>
+        <p class="panel" data-s="1">Git and GitHub for version control, pull requests and code reviews.</p>
+        <p class="panel" data-s="2">Bundling and compiling React and Node.js projects for production.</p>
+        <p class="panel" data-s="3">Jest and Cypress for unit and end-to-end tests.</p>
+        <p class="panel" data-s="4">Docker to package an app so it runs the same everywhere.</p>
+        <p class="panel" data-s="5">Deployments on Vercel, Netlify, Render and Heroku.</p>
+        <p class="panel" data-s="6">AWS and Azure fundamentals. AWS Cloud Practitioner is in progress.</p>
+        <p class="panel" data-s="7">Watching logs and behaviour after release. A direction I am deepening.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCENE: EMRAN ================= -->
+<section class="scene scene-emran" id="emran" data-chapter="Real project: EMRAN">
+  <div class="wrap split">
+    <div class="copy">
+      <h2 class="h2 rv" style="--d:.05s">A real platform for a real community.</h2>
+      <p class="lead rv" style="--d:.2s">Lead full-stack developer and technical support since October 2025.</p>
+      <div class="stage-tabs vertical rv" style="--d:.35s" data-stage-tabs="emranStage" role="tablist" aria-label="EMRAN case study">
+        <button role="tab" data-s="0">The brief</button><button role="tab" data-s="1">The platform</button><button role="tab" data-s="2">Features</button><button role="tab" data-s="3">Security</button><button role="tab" data-s="4">Where it lives</button>
+      </div>
+    </div>
+    <div class="stage rv" id="emranStage" data-stage style="--d:.3s">
+      <div class="case">
+        <div class="mock shot-wrap"><div class="mock-bar"><i></i><i></i><i></i><span class="url">emran.center</span></div>
+          <div class="site s-emran"><div class="s-nav"><b>EMRAN</b><span>Dashboard</span><span>Dues</span><span>Events</span><span>Elections</span></div><div class="e-hero"><b>Welcome back</b><span>Member portal</span></div><div class="dash-cards"><div><small>Dues status</small><b class="chip chip-ok">Paid</b></div><div><small>Events</small><b>Upcoming</b></div><div><small>Elections</small><b>Open</b></div></div></div>
+          <img class="shot" src="assets/projects/emran-screenshot.jpg" alt="EMRAN member portal screenshot" onerror="this.remove()">
+        </div>
+        <div class="case-text">
+          <div class="panel" data-s="0"><h3>The brief</h3><p>One full-scale membership platform for 500+ former ExxonMobil Nigeria employees.</p></div>
+          <div class="panel" data-s="1"><h3>The platform</h3><p>A member portal, plus a separate secure admin portal with role-based access for super-admins and admins.</p></div>
+          <div class="panel" data-s="2"><h3>Features</h3><ul><li>Pension and medical plan management</li><li>Insurance</li><li>Elections and events</li><li>Information sharing</li><li>Annual dues and registration payments</li></ul></div>
+          <div class="panel" data-s="3"><h3>Security</h3><ul><li>Authentication and authorisation</li><li>Protected routes and session management</li><li>Payment gateway for member dues</li><li>Admin access provisioned only by a super-admin</li></ul></div>
+          <div class="panel" data-s="4"><h3>Where it lives</h3><p>The platform is live at <a href="#" data-link="emran" target="_blank" rel="noopener">emran.center</a>.</p><p class="indep">This is my independent portfolio. It is not an EMRAN service or endorsement.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCENE: PROJECTS ================= -->
+<section class="scene scene-projects" id="projects" data-chapter="Real projects">
+  <div class="wrap">
+    <div class="copy center">
+      <h2 class="h2 rv" style="--d:.05s">Live work you can open today.</h2>
+    </div>
+    <div class="stage proj-grid rv" data-stage style="--d:.25s">
+      <article class="proj" data-s="0" style="--h:210">
+        <div class="proj-art shot-wrap"><i></i><img class="shot" src="assets/projects/campusify-web.jpg" alt="Campusify web platform screenshot" onerror="this.remove()"></div>
+        <h3>Campusify web platform</h3><p>Full-stack B2B student marketplace.</p><small>React · Node.js · Express · MongoDB · Cloudinary</small><a href="#" data-link="campusify" target="_blank" rel="noopener">campusify.net</a>
+      </article>
+      <article class="proj" data-s="1" style="--h:160">
+        <div class="proj-art shot-wrap phone-art"><i></i><img class="shot" src="assets/projects/campusify-android.jpg" alt="Campusify Android app screenshot" onerror="this.remove()"></div>
+        <h3>Campusify Android app</h3><p>Mobile commerce with AdMob and Unity Ads.</p><small>React Native · Expo</small><a href="#" data-link="playstore" target="_blank" rel="noopener">Google Play</a>
+      </article>
+      <article class="proj" data-s="2" style="--h:215">
+        <div class="proj-art shot-wrap"><i></i><img class="shot" src="assets/projects/plurity-plumbing.jpg" alt="Plurity Plumbing Solutions screenshot" onerror="this.remove()"></div>
+        <h3>Plurity Plumbing Solutions</h3><p>Business website for plumbing services.</p><small>React · Tailwind CSS · Cloudinary</small><a href="#" data-link="plurity" target="_blank" rel="noopener">plurityplumbingsolutions.com</a>
+      </article>
+      <article class="proj" data-s="3" style="--h:195">
+        <div class="proj-art shot-wrap"><i></i><img class="shot" src="assets/projects/rar-water.jpg" alt="Rar Water website screenshot" onerror="this.remove()"></div>
+        <h3>Rar Water</h3><p>Website for sachet, bottled water and 20L refills in Lagos.</p><small>Rosarita Ventures Limited</small><a href="#" data-link="rar" target="_blank" rel="noopener">rositawaters.com</a>
+      </article>
+      <article class="proj" data-s="4" style="--h:128">
+        <div class="proj-art shot-wrap"><i></i><img class="shot" src="assets/projects/catalogue-a.jpg" alt="Catalogue A screenshot" onerror="this.remove()"></div>
+        <h3>Catalogue A</h3><p>Invitation management app connected to Google Sheets.</p><small>Web app · Firebase</small><a href="#" data-link="catalogue" target="_blank" rel="noopener">cataloguea.vercel.app</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCENE: JOURNEY ================= -->
+<section class="scene scene-journey" id="journey" data-chapter="The journey">
+  <div class="wrap">
+    <div class="copy center">
+      <h2 class="h2 rv" style="--d:.05s">How I got here.</h2>
+      <p class="lead rv" style="--d:.2s">From supporting customers to engineering plant machinery, then into software.</p>
+    </div>
+    <div class="stage timeline rv" data-stage style="--d:.3s">
+      <ol class="tl">
+        <li data-s="0"><time>Sep 2017 – Oct 2019</time><b>Technical Customer Support Specialist</b><span>Fogaecelectrophysics, remote (Texas, USA)</span><p>Client records, bug reports and documentation across time zones.</p></li>
+        <li data-s="1"><time>Jan 2020 – Dec 2021</time><b>Condition Monitoring Engineer (NYSC)</b><span>International Breweries, Onitsha</span><p>Thermography, oil and vibration analysis on plant machinery.</p></li>
+        <li data-s="2"><time>Jan 2022 – Aug 2022</time><b>Junior Frontend Developer</b><span>Estility Inc., remote</span><p>React components, Tailwind CSS and Figma-to-code.</p></li>
+        <li data-s="3"><time>Feb 2024 – Oct 2025</time><b>Founder and Lead Full-Stack Developer</b><span>Campusify Enterprise, Lagos</span><p>Web platform and Android app, built and maintained end to end.</p></li>
+        <li data-s="4"><time>Oct 2025 – Present</time><b>Lead Full-Stack Developer and Technical Support</b><span>EMRAN, remote</span><p>A membership platform for 500+ retirees.</p></li>
+      </ol>
+      <ul class="learn">
+        <li><b>Codecademy</b><span>Full-stack web development, 1,300+ hours, 2022</span></li>
+        <li><b>Aceplora Coding Academy</b><span>UI/UX product design, 500+ hours, 2023</span></li>
+        <li><b>AWS Cloud Practitioner</b><span>In progress</span></li>
+        <li><b>University of Benin</b><span>B.A. International Studies and Diplomacy, 2018</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCENE: CONTACT ================= -->
+<section class="scene scene-contact" id="contact" data-chapter="Epilogue">
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="wrap contact-inner">
+    <p class="quote rv" style="--d:.1s">Technology is not just about writing code.<br>It is about turning ideas into useful things.</p>
+    <h2 class="contact-name rv" style="--d:.5s">Louis Joseph</h2>
+    <p class="contact-role rv" style="--d:.65s">Full-Stack Software Developer</p>
+    <p class="contact-tags rv" style="--d:.8s"><span>Web</span><span>Mobile</span><span>Digital solutions</span><span>Technical support</span></p>
+    <p class="contact-ask rv" style="--d:1s">Have an idea? Let's talk.</p>
+    <div class="contact-cards rv" style="--d:1.2s">
+      <a class="c-card" data-bind-href="whatsapp" target="_blank" rel="noopener"><small>WhatsApp</small><b data-bind="phone"></b></a>
+      <a class="c-card" data-bind-href="email"><small>Email</small><b data-bind="email"></b></a>
+    </div>
+    <p class="chat-note rv" style="--d:1.4s" data-bind="chatNote"></p>
+    <ul class="contact-links rv" style="--d:1.5s"><li><a data-bind-href="linkedin" target="_blank" rel="noopener">LinkedIn</a></li><li><a data-bind-href="portfolio" target="_blank" rel="noopener">Portfolio</a></li><li><a data-bind-href="github" target="_blank" rel="noopener">GitHub</a></li></ul>
+    <p class="disclaimer rv" style="--d:1.6s">An independent professional portfolio. Not an EMRAN service, and not endorsed by EMRAN.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ PRESENTATION LAYER ============ -->
+<div class="pres-progress" id="presProgress" aria-hidden="true"><span id="presBar"></span></div>
+<div class="chapter-card" id="chapterCard" aria-hidden="true"><span id="chapterText"></span></div>
+
+<aside class="cta-card" id="ctaCard" aria-label="Contact Louis Joseph">
+  <p data-bind="ctaQuestion"></p>
+  <div class="cta-lines"><span><small>WhatsApp</small><b data-bind="phone"></b></span><span><small>Email</small><b data-bind="email"></b></span></div>
+  <p class="cta-note" data-bind="chatNote"></p>
+</aside>
+
+<div class="controls" id="controls" role="toolbar" aria-label="Presentation controls">
+  <button data-act="prev" aria-label="Previous scene" title="Previous (←)"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 5h2v14H6zM20 5v14L9 12z" fill="currentColor"/></svg></button>
+  <button data-act="toggle" id="btnToggle" class="primary" aria-label="Play or pause" title="Play / Pause (Space)"><svg id="icoPause" viewBox="0 0 24 24" width="20" height="20"><path d="M6 5h4v14H6zM14 5h4v14h-4z" fill="currentColor"/></svg><svg id="icoPlay" viewBox="0 0 24 24" width="20" height="20" hidden><path d="M7 4.5v15l13-7.5z" fill="currentColor"/></svg></button>
+  <button data-act="next" aria-label="Next scene" title="Next (→)"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M16 5h2v14h-2zM4 5v14l11-7z" fill="currentColor"/></svg></button>
+  <button data-act="stop" aria-label="Stop and return to the website" title="Stop (S)"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="6" y="6" width="12" height="12" rx="1" fill="currentColor"/></svg></button>
+  <button data-act="restart" aria-label="Restart" title="Restart"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z" fill="currentColor"/></svg></button>
+  <span class="ctl-sep"></span>
+  <span class="ctl-label" id="ctlLabel">Prologue</span>
+  <span class="ctl-sep"></span>
+  <button data-act="mute" id="btnMute" aria-label="Sound is off. Turn on" title="Sound (M)"><svg id="icoMuted" viewBox="0 0 24 24" width="18" height="18"><path d="M4 9v6h4l5 4V5L8 9zM16 9l5 6M21 9l-5 6" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg id="icoSound" viewBox="0 0 24 24" width="18" height="18" hidden><path d="M4 9v6h4l5 4V5L8 9zM16 8a5 5 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+  <button data-act="fullscreen" aria-label="Fullscreen" title="Fullscreen (F)"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+</div>
+
+<!-- Floating Play button in normal mode -->
+<button class="fab-play" id="fabPlay" data-act="play" aria-label="Play documentary"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="currentColor"/></svg>Play</button>
+
+<script src="config.js"></script>
+<script src="demos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
