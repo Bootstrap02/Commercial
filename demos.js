@@ -1,3 +1,4 @@
+
 /* =====================================================================
    DEMOS — interactive demo content (all sample data, clearly labelled)
    ===================================================================== */
@@ -81,9 +82,46 @@ const Demos = (() => {
       `<path class="ln" d="${line}" fill="none" stroke="var(--primary)" stroke-width="2.5" pathLength="1" vector-effect="non-scaling-stroke"/>` +
       pts.map(p => `<circle cx="${p[0]}" cy="${p[1]}" r="3.2" fill="var(--bg)" stroke="var(--primary)" stroke-width="2" vector-effect="non-scaling-stroke"/>`).join("");
 
-    // spreadsheet table (latest 6)
-    el("sheetBody").innerHTML = set.slice(0, 6).map((r, i) =>
-      `<tr><th>${i + 2}</th><td>${String(r.day).padStart(2, "0")} ${MONTHS[r.monthIdx]} 2026</td><td>${r.product}</td><td>${r.category}</td><td class="num">${r.qty}</td><td class="num">${naira(r.revenue)}</td><td>${r.location}</td><td>${r.customer}</td></tr>`).join("");
+    renderSheet(cat, set);
+  }
+
+  /* ---------- Excel window ---------- */
+  const SALES_HEAD = '<tr class="cols"><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th></tr><tr class="hdr"><th>1</th><th>Date</th><th>Product</th><th>Category</th><th>Qty</th><th>Revenue</th><th>Location</th><th>Customer</th></tr>';
+  const ENTRY_HEAD = '<tr class="cols"><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th></tr><tr class="hdr"><th>1</th><th>No.</th><th>Full name</th><th>Phone</th><th>Email</th><th>Town</th><th>Status</th><th>Entered</th></tr>';
+  const PEOPLE = [["Adaeze Okafor","Lagos"],["Tunde Bakare","Ibadan"],["Chiamaka Eze","Abuja"],["Ibrahim Musa","Kaduna"],["Funke Adeyemi","Lagos"],["Emeka Nwosu","Enugu"],["Zainab Lawal","Abuja"],["Segun Ajayi","Ibadan"],["Ngozi Obi","Lagos"],["Bayo Ogunleye","Ibadan"],["Hauwa Bello","Kano"],["Kelechi Uche","Owerri"]];
+  let entryTimer = null, entryCount = 0, mode = "sales";
+  function entryRow(i, typing) {
+    const [n, t] = PEOPLE[i % PEOPLE.length], id = String(i + 1).padStart(3, "0");
+    const mail = n.toLowerCase().replace(/ /g, ".") + "@example.com";
+    return `<tr class="${typing ? "new typing" : ""}"><th>${i + 2}</th><td>${id}</td><td>${n}</td><td>0800 000 ${String(1000 + i * 37).slice(-4)}</td><td>${mail}</td><td>${t}</td><td>${i % 5 === 3 ? "Pending" : "Verified"}</td><td>${typing ? "now" : "Today"}</td></tr>`;
+  }
+  function stopEntry() { clearInterval(entryTimer); entryTimer = null; }
+  function setTabs(m) { el("tabSales").classList.toggle("on", m === "sales"); el("tabEntry").classList.toggle("on", m === "entry"); el("xlFile").textContent = m === "sales" ? "Sales_Report_DEMO.xlsx" : "Contact_List_DEMO.xlsx"; }
+  function renderSheet(cat, set) {
+    if (!el("sheetBody")) return;
+    stopEntry(); mode = "sales"; setTabs("sales"); el("sheet").classList.remove("entrymode");
+    el("sheetHead").innerHTML = SALES_HEAD;
+    el("sheetBody").innerHTML = set.slice(0, 7).map((r, i) =>
+      `<tr><th>${i + 2}</th><td>${String(r.day).padStart(2, "0")} ${MONTHS[r.monthIdx]} 2026</td><td>${r.product}</td><td>${r.category}</td><td class="num">${r.qty}</td><td class="num${i === 0 ? " sel" : ""}">${naira(r.revenue)}</td><td>${r.location}</td><td>${r.customer}</td></tr>`).join("");
+    el("xlCell").textContent = "E2";
+    el("xlFormula").textContent = cat === "All" ? '=SUM(E2:E91)' : `=SUMIFS(E:E,C:C,"${cat}")`;
+  }
+  function renderEntry() {
+    if (!el("sheetBody")) return;
+    stopEntry(); mode = "entry"; setTabs("entry"); entryCount = 5;
+    el("sheetHead").innerHTML = ENTRY_HEAD;
+    el("sheet").classList.add("entrymode");
+    const body = el("sheetBody");
+    body.innerHTML = Array.from({ length: 5 }, (_, k) => entryRow(k, false)).join("");
+    const info = () => { el("xlCell").textContent = "B" + (entryCount + 1); el("xlFormula").textContent = "=COUNTA(B2:B" + (entryCount + 1) + ")  →  " + entryCount + " records"; };
+    info();
+    entryTimer = setInterval(() => {
+      if (document.body.classList.contains("paused")) return;
+      body.querySelectorAll("tr.typing").forEach(r => r.classList.remove("typing"));
+      body.insertAdjacentHTML("beforeend", entryRow(entryCount, true)); entryCount++;
+      if (body.children.length > 7) body.removeChild(body.firstElementChild);
+      info();
+    }, 1300);
   }
 
   /* ---------- Support ticket sync ---------- */
@@ -98,11 +136,11 @@ const Demos = (() => {
   /* ---------- Stage change router ---------- */
   document.addEventListener("stagechange", (e) => {
     const { stage, index } = e.detail;
-    if (stage.closest("#data")) renderData(index);
+    if (stage.closest("#data")) { renderData(index === 5 ? 0 : index); if (index === 5) renderEntry(); }
     if (stage.closest("#support")) ticketStage(index);
   });
 
-  return { renderData, ticketStage };
+  return { renderData, ticketStage, rows, MONTHS };
 })();
 
 /* ---------- Bind SITE_CONFIG / PROJECT_LINKS to the page ---------- */
