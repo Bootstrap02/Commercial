@@ -1,3 +1,4 @@
+
 /* =====================================================================
    STYLES — change the colours here (":root") to re-theme the whole site
    ===================================================================== */
@@ -506,3 +507,117 @@ body.mode-presenting .contact-links a { pointer-events: none; }
 
 /* Intro and contact scenes never scroll (their glow orbs extend past the edges) */
 body.mode-presenting .scene-intro.active, body.mode-presenting .scene-contact.active { overflow: hidden; }
+
+
+/* =====================================================================
+   FIXED CONTACT CARD (always on in presentation mode, message follows the scene)
+   ===================================================================== */
+.cta-card { left: 22px; bottom: 16px; width: 430px; max-width: 44vw; padding: 12px 16px 11px; border-radius: 16px; background: rgba(9, 18, 34, .92); border: 1px solid rgba(212, 175, 95, .4); border-left: 4px solid var(--primary); box-shadow: 0 18px 50px -14px rgba(0, 0, 0, .7); font-size: 13px; display: grid; gap: 3px; }
+.cta-card .cta-tag { justify-self: start; padding: 2px 10px; border-radius: 99px; background: var(--primary); color: #1a1405; font-size: 11px; font-weight: 800; letter-spacing: .02em; transition: opacity .3s; }
+.cta-card > p.cta-head { font-family: var(--font-display); font-size: 18px; font-weight: 600; line-height: 1.2; white-space: normal; transition: opacity .3s, transform .3s var(--ease); }
+.cta-card .cta-sub { color: var(--muted); font-size: 12.5px; line-height: 1.35; transition: opacity .3s, transform .3s var(--ease); }
+.cta-card.swap .cta-tag, .cta-card.swap .cta-head, .cta-card.swap .cta-sub { opacity: 0; transform: translateY(6px); }
+.cta-card .cta-lines { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 4px; padding-top: 7px; border-top: 1px solid var(--border); }
+.cta-card .cta-lines span { display: grid; }
+.cta-card .cta-lines small { color: var(--primary); font-weight: 800; font-size: 10.5px; text-transform: none; letter-spacing: .03em; }
+.cta-card .cta-lines b { font-size: 15px; font-weight: 800; }
+.cta-card .cta-note { margin-top: 3px; padding: 5px 9px; border-radius: 8px; background: rgba(212, 175, 95, .12); color: #f1dca4; font-size: 12px; font-weight: 600; }
+/* controls move to the right so they never cover the card */
+body.mode-presenting .controls { left: auto; right: 22px; transform: translate(0, 14px); }
+body.mode-presenting.show-controls .controls { transform: none; }
+body.mode-presenting .scene { padding-bottom: 150px; }
+.cta-card { width: 480px; padding: 10px 15px 10px; gap: 2px; }
+.cta-card .cta-tag { display: none; }
+.cta-card > p.cta-head { font-size: 17.5px; }
+.cta-card .cta-lines { gap: 2px 20px; margin-top: 3px; padding-top: 6px; flex-wrap: nowrap; }
+.cta-card .cta-lines b { font-size: 14.5px; white-space: nowrap; }
+.cta-card .cta-note { font-size: 11.5px; padding: 4px 9px; }
+.cta-card .cta-sub { font-size: 12px; }
+body.mode-presenting .scene { padding-bottom: 140px; }
+
+
+/* =====================================================================
+   DATA SCENE v2 — Excel window + dashboard
+   ===================================================================== */
+.data-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: 14px; align-items: start; }
+.xl { border-radius: 12px; overflow: hidden; background: #fff; color: #1f2937; box-shadow: 0 24px 60px -20px rgba(0, 0, 0, .7), 0 0 0 1px rgba(255, 255, 255, .1); }
+.xl-title { display: flex; align-items: center; gap: 10px; padding: 6px 12px; background: #1d6f42; color: #fff; font-size: 12px; font-weight: 700; }
+.xl-title b { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 4px; background: #fff; color: #1d6f42; font-size: 13px; }
+.xl-title em { margin-left: auto; font-style: normal; font-weight: 600; opacity: .8; }
+.xl-ribbon { display: flex; gap: 2px; padding: 4px 10px 0; background: #e9f1ec; font-size: 11.5px; font-weight: 600; color: #3b4a42; border-bottom: 1px solid #cfe0d6; }
+.xl-ribbon span { padding: 4px 11px; border-radius: 6px 6px 0 0; } .xl-ribbon .on { background: #fff; color: #1d6f42; }
+.xl-fx { display: flex; align-items: center; gap: 8px; padding: 5px 10px; border-bottom: 1px solid #dfe3ea; font-size: 11.5px; background: #fff; }
+.xl-fx .cell { min-width: 48px; padding: 2px 8px; border: 1px solid #cfd5df; border-radius: 4px; text-align: center; font-weight: 700; }
+.xl-fx i { font-family: var(--font-display); color: #6b7280; } .xl-fx .f { flex: 1; font-family: ui-monospace, Menlo, Consolas, monospace; color: #1f2937; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.xl-wrap { height: 252px; overflow: hidden; position: relative; }
+.xl #sheet { width: 100%; border-collapse: collapse; font-size: 11.5px; white-space: nowrap; font-family: Arial, sans-serif; }
+.xl #sheet th, .xl #sheet td { border: 1px solid #dde2ee; padding: 3px 7px; height: 24px; text-align: left; }
+.xl #sheet .cols th { background: #eef1f8; color: #6b7280; font-weight: 600; text-align: center; }
+.xl #sheet .hdr th { background: #d9ead9; color: #14532d; font-weight: 700; }
+.xl #sheet tbody th { background: #eef1f8; color: #6b7280; font-weight: 600; text-align: center; width: 28px; }
+.xl #sheet tbody tr:nth-child(even) td { background: #f7faf8; }
+.xl #sheet td.sel { outline: 2px solid #1d6f42; outline-offset: -2px; background: #e8f4ec !important; }
+.xl #sheet tr.new td { animation: xlNew 1.2s ease-out; } @keyframes xlNew { from { background: #fff3c4; } }
+.xl #sheet tr.typing td:last-child::after { content: "|"; animation: blink .8s steps(2) infinite; } @keyframes blink { 50% { opacity: 0; } }
+.xl-tabs { display: flex; align-items: center; gap: 2px; padding: 5px 10px; background: #eef1f6; border-top: 1px solid #dfe3ea; font-size: 11.5px; font-weight: 600; color: #4b5563; }
+.xl-tabs span { padding: 3px 12px; border-radius: 0 0 6px 6px; } .xl-tabs span.on { background: #fff; color: #1d6f42; box-shadow: inset 0 -2px #1d6f42; }
+.xl-dl { margin-left: auto; color: #1d6f42; font-weight: 800; text-decoration: none; } .xl-dl:hover { text-decoration: underline; }
+body.mode-presenting .xl-dl { display: none; }
+.dash .kpis { grid-template-columns: repeat(2, 1fr); margin-bottom: 10px; }
+.dash .kpi { padding: 8px 12px; } .dash .kpi b { font-size: clamp(18px, 1.9vw, 26px); }
+.charts2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.charts2 .card { padding: 10px 12px; }
+.charts2 .bar .track { height: clamp(70px, 12vh, 110px); }
+.charts2 #lineChart { height: clamp(70px, 12vh, 110px); }
+@media (max-width: 980px) { .data-grid { grid-template-columns: 1fr; } }
+#data .h2 { font-size: clamp(28px, 3vw, 42px); }
+#data .lead { margin-top: 8px; }
+.xl-wrap { height: 228px; }
+.xl #sheet.entrymode tbody tr { animation: none; }
+.xl-wrap { height: 220px; }
+
+
+/* =====================================================================
+   ASSISTANCE IN ACTION
+   ===================================================================== */
+.ac-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.ac { padding: 14px 16px; border-radius: 16px; background: var(--surface); border: 1px solid var(--border); display: grid; gap: 10px; align-content: start; min-height: 0; transition: border-color .4s, box-shadow .4s, transform .5s var(--ease); }
+.ac.is-on { border-color: rgba(212, 175, 95, .6); box-shadow: 0 0 0 1px rgba(212, 175, 95, .25), 0 18px 40px -20px rgba(212, 175, 95, .35); }
+.ac header { display: flex; gap: 12px; align-items: center; }
+.ac-ic { flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; border: 1px solid rgba(212, 175, 95, .5); background: rgba(212, 175, 95, .1); }
+.ac-ic svg { width: 20px; height: 20px; fill: none; stroke: var(--primary); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ac h4 { font-family: var(--font-display); font-size: 18px; font-weight: 600; } .ac header small { color: var(--muted); font-size: 12.5px; }
+.ac-foot { color: var(--muted); font-size: 12.5px; } .tick { color: var(--accent); font-weight: 800; }
+/* research */
+.rs-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.rs-cols div { padding: 9px 10px; border-radius: 11px; background: rgba(255, 255, 255, .04); border: 1px solid var(--border); display: grid; gap: 3px; font-size: 13px; position: relative; }
+.rs-cols span { color: var(--muted); } .rs-cols em { font-style: normal; font-size: 11.5px; font-weight: 700; color: var(--muted); }
+.rs-cols i { display: block; height: 6px; border-radius: 9px; background: rgba(255, 255, 255, .1); position: relative; overflow: hidden; }
+.rs-cols i::after { content: ""; position: absolute; inset: 0; width: 0; border-radius: inherit; background: var(--secondary); }
+.scene.on .rs-cols i::after { animation: grow 1.4s .9s var(--ease) forwards; } @keyframes grow { to { width: var(--w); } }
+.rs-cols .best { border-color: rgba(212, 175, 95, .65); background: rgba(212, 175, 95, .1); } .rs-cols .best i::after { background: var(--primary); } .rs-cols .best em { color: var(--primary); }
+/* inbox */
+.inbox { display: grid; gap: 6px; } .inbox li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 7px 11px; border-radius: 10px; background: rgba(255, 255, 255, .04); border: 1px solid var(--border); font-size: 13px; opacity: 0; transform: translateX(-10px); }
+.scene.on .inbox li { animation: rowIn .6s var(--ease) forwards; } .scene.on .inbox li:nth-child(1) { animation-delay: .9s; } .scene.on .inbox li:nth-child(2) { animation-delay: 1.5s; } .scene.on .inbox li:nth-child(3) { animation-delay: 2.1s; } .scene.on .inbox li:nth-child(4) { animation-delay: 2.7s; }
+@keyframes rowIn { to { opacity: 1; transform: none; } }
+/* trip */
+.trip { display: grid; gap: 6px; position: relative; padding-left: 14px; } .trip::before { content: ""; position: absolute; left: 3px; top: 8px; bottom: 8px; width: 2px; background: var(--border); }
+.trip li { position: relative; font-size: 13px; opacity: 0; display: flex; gap: 12px; } .trip li::before { content: ""; position: absolute; left: -15px; top: 6px; width: 8px; height: 8px; border-radius: 50%; background: var(--primary); }
+.trip time { color: var(--primary); font-weight: 800; min-width: 74px; font-size: 12px; }
+.scene.on .trip li { animation: fadeUp .6s var(--ease) forwards; } .scene.on .trip li:nth-child(1) { animation-delay: 1s; } .scene.on .trip li:nth-child(2) { animation-delay: 1.7s; } .scene.on .trip li:nth-child(3) { animation-delay: 2.4s; } .scene.on .trip li:nth-child(4) { animation-delay: 3.1s; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+/* docs */
+.docs { display: flex; align-items: center; gap: 10px; min-height: 76px; position: relative; }
+.pdf { display: grid; place-items: center; text-align: center; width: 70px; height: 78px; border-radius: 8px; background: #fff; color: #7a1f1f; font-size: 11.5px; font-weight: 800; border-top: 6px solid #d64545; padding: 4px; }
+.pdf small { display: block; color: #6b7280; font-weight: 600; font-size: 10px; }
+.pdf.out { width: 128px; border-top-color: var(--primary); color: var(--ink); opacity: 0; transform: scale(.85); }
+.docs .arrow { font-size: 22px; color: var(--primary); opacity: 0; }
+.scene.on .pdf.p1 { animation: nudgeR 2.4s 1s var(--ease) both; } .scene.on .pdf.p2 { animation: nudgeR 2.4s 1.1s var(--ease) both; } .scene.on .pdf.p3 { animation: nudgeR 2.4s 1.2s var(--ease) both; }
+@keyframes nudgeR { 40%, 100% { transform: translateX(14px); } }
+.scene.on .docs .arrow { animation: fadeUp .5s 2.2s forwards; } .scene.on .pdf.out { animation: popIn .7s 2.6s var(--ease) forwards; } @keyframes popIn { to { opacity: 1; transform: none; } }
+@media (max-width: 760px) { .ac-grid { grid-template-columns: 1fr; } }
+.scene-assist .h2 { font-size: clamp(28px, 3vw, 42px); } .scene-assist .lead { margin-top: 8px; }
+.ac-grid { gap: 10px; } .ac { padding: 10px 14px; gap: 7px; } .ac-ic { width: 34px; height: 34px; } .ac h4 { font-size: 17px; }
+.rs-cols div { padding: 7px 9px; } .trip { gap: 3px; } .trip li { font-size: 12.5px; }
+.docs { min-height: 64px; } .pdf { height: 62px; width: 66px; font-size: 11px; } .pdf.out { width: 156px; font-size: 11px; } .inbox { gap: 5px; } .inbox li { padding: 5px 10px; }
+body.mode-presenting .scene-contact .wrap { transform: translateY(-28px); }
