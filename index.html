@@ -551,14 +551,19 @@
 <div class="chapter-card" id="chapterCard" aria-hidden="true"><span id="chapterText"></span></div>
 
 <aside class="cta-card" id="ctaCard" aria-label="Contact Louis Joseph">
-  <span class="cta-tag" id="ctaTag">Work with me</span>
-  <p class="cta-head" id="ctaHead" data-bind="ctaQuestion"></p>
-  <p class="cta-sub" id="ctaSub"></p>
-  <div class="cta-lines">
-    <span><small>Call / WhatsApp</small><b data-bind="phone"></b></span>
-    <span><small>Email</small><b data-bind="email"></b></span>
+  <div class="cta-who">
+    <img class="cta-photo" src="assets/images/louis-card.jpg" alt="Louis Joseph" width="88" height="88" decoding="async">
+    <span class="cta-name" data-bind="name"></span>
   </div>
-  <p class="cta-note" data-bind="chatNote"></p>
+  <div class="cta-body">
+    <p class="cta-head" id="ctaHead" data-bind="ctaQuestion"></p>
+    <p class="cta-sub" id="ctaSub"></p>
+    <div class="cta-lines">
+      <span><small>Call / WhatsApp</small><b data-bind="phone"></b></span>
+      <span><small>Email</small><b data-bind="email"></b></span>
+    </div>
+    <p class="cta-note" data-bind="chatNote"></p>
+  </div>
 </aside>
 
 <div class="controls" id="controls" role="toolbar" aria-label="Presentation controls">
