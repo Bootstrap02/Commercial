@@ -129,9 +129,33 @@
     $("#ctlLabel").textContent = sc.dataset.chapter || sc.id;
     body.classList.toggle("cta-on", !CFG.hideCtaOn.includes(sc.id));
     updateCta(sc.id);
+    requestAnimationFrame(() => { measureCta(); fitScene(sc); setTimeout(() => fitScene(sc), 400); });
     if (i > 0) sound.chime();
     updateProgress();
   }
+
+  /* ---- Advert banner: build the scrolling services strip, measure its height,
+         and shrink any scene that would otherwise run underneath it ---- */
+  const root = document.documentElement;
+  function buildTicker() {
+    const t = $("#ctaTrack"); if (!t || typeof PROMO_SERVICES === "undefined") return;
+    const set = PROMO_SERVICES.map(x => `<span>${x}</span>`).join("");
+    t.innerHTML = set + set;
+  }
+  function measureCta() { const c = $("#ctaCard"); if (c) root.style.setProperty("--cta-h", Math.ceil(c.getBoundingClientRect().height) + "px"); }
+  function fitScene(sc) {
+    const w = sc && sc.querySelector(":scope > .wrap, :scope > .intro-inner"); if (!w) return;
+    w.style.transform = ""; w.style.transformOrigin = "center center";
+    if (!body.classList.contains("mode-presenting")) return;
+    const cs = getComputedStyle(sc), avail = sc.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom), need = w.offsetHeight;
+    const k = Math.max(.6, Math.min(1, avail / need));
+    if (k < .995) w.style.transform = `scale(${k.toFixed(3)})`;
+  }
+  function clearFit() { scenes.forEach(sc => { const w = sc.querySelector(":scope > .wrap, :scope > .intro-inner"); if (w) w.style.transform = ""; }); }
+  buildTicker();
+  if ("ResizeObserver" in window) new ResizeObserver(() => { measureCta(); fitScene(scenes[state.idx]); }).observe($("#ctaCard"));
+  window.addEventListener("resize", () => { measureCta(); if (body.classList.contains("mode-presenting")) fitScene(scenes[state.idx]); });
+  measureCta();
 
   /* Contact card: message follows the scene (texts live in CTA_MESSAGES in config.js) */
   function updateCta(id) {
@@ -139,7 +163,7 @@
     const card = $("#ctaCard"); if (!m || !card) return;
     if (card.dataset.msg === id) return;
     card.dataset.msg = id; card.classList.add("swap");
-    setTimeout(() => { $("#ctaHead").textContent = m.head; $("#ctaSub").textContent = m.sub; card.classList.remove("swap"); }, 320);
+    setTimeout(() => { $("#ctaHead").textContent = m.head; card.classList.remove("swap"); }, 320);
   }
 
   function updateProgress() {
@@ -196,7 +220,7 @@
     stages.forEach(s => s.set(0, true));
     $("#presBar").style.width = "0%";
     $("#chapterCard").classList.remove("show");
-    $("#ctaCard").dataset.msg = "";
+    $("#ctaCard").dataset.msg = ""; clearFit();
     if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
     window.scrollTo({ top: 0, behavior: "instant" });
     enterScene($("#intro"), { replay: true });
