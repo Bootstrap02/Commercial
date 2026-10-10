@@ -16,7 +16,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="showcase.css">
 </head>
 <body class="mode-normal">
 <a class="skip" href="#about">Skip to content</a>
@@ -551,18 +550,20 @@
 <div class="chapter-card" id="chapterCard" aria-hidden="true"><span id="chapterText"></span></div>
 
 <aside class="cta-card" id="ctaCard" aria-label="Contact Louis Joseph">
-  <div class="cta-who">
-    <img class="cta-photo" src="assets/images/louis-card.jpg" alt="Louis Joseph" width="88" height="88" decoding="async">
-    <span class="cta-name" data-bind="name"></span>
-  </div>
-  <div class="cta-body">
-    <p class="cta-head" id="ctaHead" data-bind="ctaQuestion"></p>
-    <p class="cta-sub" id="ctaSub"></p>
+  <div class="cta-ticker" aria-hidden="true"><div class="cta-track" id="ctaTrack"></div></div>
+  <div class="cta-main">
+    <div class="cta-who">
+      <img class="cta-photo" src="assets/images/louis-card.jpg" alt="Louis Joseph" width="96" height="96" decoding="async">
+      <span class="cta-name" data-bind="name"></span>
+    </div>
+    <div class="cta-body">
+      <p class="cta-head" id="ctaHead" data-bind="ctaQuestion"></p>
+      <p class="cta-note" data-bind="chatNote"></p>
+    </div>
     <div class="cta-lines">
       <span><small>Call / WhatsApp</small><b data-bind="phone"></b></span>
       <span><small>Email</small><b data-bind="email"></b></span>
     </div>
-    <p class="cta-note" data-bind="chatNote"></p>
   </div>
 </aside>
 
