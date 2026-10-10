@@ -16,7 +16,7 @@ const SITE_CONFIG = {
   portfolio: "https://louisjoseph.vercel.app",
   // Shown in the on-screen contact card during presentation mode
   chatNote: "My LinkedIn profile and portfolio are in the comment section.",
-  ctaQuestion: "Need a website for your business, a virtual assistant, a personal assistant or a research assistant?"
+  ctaQuestion: "Need a website, a virtual assistant, a personal assistant or a research assistant?"
 };
 
 /* Links used by the project cards. Change a URL here and every card updates. */
@@ -63,9 +63,15 @@ const PRESENTATION_CONFIG = {
 
 /* The fixed contact card changes its message to match the scene on screen.
    Edit the wording here. Scenes not listed use "default". */
+/* The scrolling strip along the top of the advert banner. Add, remove or reorder freely. */
+const PROMO_SERVICES = [
+  "Business websites", "Mobile apps", "Virtual assistant", "Personal assistant", "Research assistant",
+  "Data entry and Excel", "Travel planning", "Email and document support", "Online shopping research", "Computer and account help"
+];
+
 const CTA_MESSAGES = {
-  default:   { head: "Need a website for your business, a virtual assistant, a personal assistant or a research assistant?", sub: "Call or message me on WhatsApp. I will get back to you." },
-  intro:     { head: "Need a website for your business, a virtual assistant, a personal assistant or a research assistant?", sub: "Call or message me on WhatsApp. I will get back to you." },
+  default:   { head: "Need a website, a virtual assistant, a personal assistant or a research assistant?", sub: "Call or message me on WhatsApp. I will get back to you." },
+  intro:     { head: "Need a website, a virtual assistant, a personal assistant or a research assistant?", sub: "Call or message me on WhatsApp. I will get back to you." },
   about:     { head: "Do you need a website, or someone reliable to handle your online tasks?", sub: "I can build it for you, or take care of it for you." },
   web:       { head: "Do you need a website for your business?", sub: "Shops, schools, churches, associations or personal pages. I can build yours." },
   industries:{ head: "Whatever your business is, a website helps people find you.", sub: "Tell me what you do and I will design it." },
@@ -79,6 +85,6 @@ const CTA_MESSAGES = {
   devops:    { head: "Want your website put online and kept running smoothly?", sub: "I can take care of getting it live." },
   emran:     { head: "Does your association or group need a members' website?", sub: "Sign-up, payments, events and announcements in one place." },
   projects:  { head: "Have an idea for a website or an app?", sub: "Let us talk about it. There is no pressure." },
-  journey:   { head: "Need a website for your business, a virtual assistant, a personal assistant or a research assistant?", sub: "Call or message me on WhatsApp. I will get back to you." },
+  journey:   { head: "Need a website, a virtual assistant, a personal assistant or a research assistant?", sub: "Call or message me on WhatsApp. I will get back to you." },
   contact:   { head: "Have an idea? Let's talk.", sub: "Call, WhatsApp or email me." }
 };
