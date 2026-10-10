@@ -16,7 +16,7 @@ const SITE_CONFIG = {
   portfolio: "https://louisjoseph.vercel.app",
   // Shown in the on-screen contact card during presentation mode
   chatNote: "My LinkedIn profile and portfolio are in the comment section.",
-  ctaQuestion: "Need a website, app, digital solution or technical assistance?"
+  ctaQuestion: "Need a website for your business, a virtual assistant, a personal assistant or a research assistant?"
 };
 
 /* Links used by the project cards. Change a URL here and every card updates. */
@@ -64,21 +64,21 @@ const PRESENTATION_CONFIG = {
 /* The fixed contact card changes its message to match the scene on screen.
    Edit the wording here. Scenes not listed use "default". */
 const CTA_MESSAGES = {
-  default:   { tag: "Work with me",     head: "Need a website, app or technical help?",   sub: "Call or message me. I will get back to you." },
-  intro:     { tag: "Work with me",     head: "Need a website, app or technical help?",   sub: "Call or message me. I will get back to you." },
-  about:     { tag: "Work with me",     head: "Need a developer you can rely on?",        sub: "Web, mobile and digital solutions, built properly." },
-  web:       { tag: "Websites",         head: "Want a website like this one?",            sub: "Business, shop, school, association or personal. Contact me to build yours." },
-  industries:{ tag: "Websites",         head: "Whatever your business, it needs a website.", sub: "Tell me what you do and I will design it." },
-  mobile:    { tag: "Mobile apps",      head: "Need a mobile app for your idea?",         sub: "Android apps built with React Native and Expo." },
-  design:    { tag: "UI/UX design",     head: "Need a clean, easy-to-use design?",        sub: "Wireframes, prototypes and finished interfaces." },
-  data:      { tag: "Data and Excel",   head: "Need data entry, spreadsheets or reports?", sub: "Messy data turned into clear tables, charts and summaries." },
-  research:  { tag: "Research",         head: "Need something researched properly?",      sub: "Product, supplier and market comparisons, in a clear report." },
-  support:   { tag: "Technical support",head: "Stuck with a technical problem?",          sub: "Accounts, email, websites and software. Let me sort it out." },
-  assist:    { tag: "Virtual assistant",head: "Need tasks taken off your plate?",       sub: "Research, email, bookings and documents, handled remotely." },
-  services:  { tag: "Virtual assistant",head: "Need a virtual or personal assistant?",    sub: "Travel, admin, documents, email and research, done remotely." },
-  devops:    { tag: "Deployment",       head: "Need your project put online?",            sub: "Version control, Docker and cloud deployment." },
-  emran:     { tag: "Real project",     head: "Need a platform like this?",               sub: "Member portals, payments and admin dashboards." },
-  projects:  { tag: "Real projects",    head: "Have a project in mind?",                  sub: "Let us talk about what you want to build." },
-  journey:   { tag: "Work with me",     head: "Need a website, app or technical help?",   sub: "Call or message me. I will get back to you." },
-  contact:   { tag: "Get in touch",     head: "Have an idea? Let's talk.",                sub: "Call, WhatsApp or email me." }
+  default:   { head: "Need a website for your business, a virtual assistant, a personal assistant or a research assistant?", sub: "Call or message me on WhatsApp. I will get back to you." },
+  intro:     { head: "Need a website for your business, a virtual assistant, a personal assistant or a research assistant?", sub: "Call or message me on WhatsApp. I will get back to you." },
+  about:     { head: "Do you need a website, or someone reliable to handle your online tasks?", sub: "I can build it for you, or take care of it for you." },
+  web:       { head: "Do you need a website for your business?", sub: "Shops, schools, churches, associations or personal pages. I can build yours." },
+  industries:{ head: "Whatever your business is, a website helps people find you.", sub: "Tell me what you do and I will design it." },
+  mobile:    { head: "Do you need a mobile app for your business or idea?", sub: "An app that people can install and use on their phones." },
+  design:    { head: "Want your website or app to look beautiful and be easy to use?", sub: "I can design it before it is built, so you see it first." },
+  data:      { head: "Need help with data entry, Excel sheets or reports?", sub: "Messy lists turned into clear tables, charts and summaries." },
+  research:  { head: "Do you need a research assistant?", sub: "Products, prices, suppliers and options, compared and explained clearly." },
+  support:   { head: "Having trouble with your email, account, phone or computer?", sub: "Tell me the problem and I will help you sort it out." },
+  assist:    { head: "Do you need a virtual assistant or a personal assistant?", sub: "Travel, bookings, emails, forms and documents, handled for you." },
+  services:  { head: "Do you need a virtual assistant or a personal assistant?", sub: "I handle the details, so you can focus on what matters most." },
+  devops:    { head: "Want your website put online and kept running smoothly?", sub: "I can take care of getting it live." },
+  emran:     { head: "Does your association or group need a members' website?", sub: "Sign-up, payments, events and announcements in one place." },
+  projects:  { head: "Have an idea for a website or an app?", sub: "Let us talk about it. There is no pressure." },
+  journey:   { head: "Need a website for your business, a virtual assistant, a personal assistant or a research assistant?", sub: "Call or message me on WhatsApp. I will get back to you." },
+  contact:   { head: "Have an idea? Let's talk.", sub: "Call, WhatsApp or email me." }
 };
