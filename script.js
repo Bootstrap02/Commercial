@@ -1,3 +1,4 @@
+
 /* =====================================================================
    SCRIPT — presentation engine, stage component, navigation, sound
    Three states: NORMAL (free browsing) → PRESENTING (automatic) → STOP → NORMAL
@@ -127,8 +128,18 @@
     showChapter(sc);
     $("#ctlLabel").textContent = sc.dataset.chapter || sc.id;
     body.classList.toggle("cta-on", !CFG.hideCtaOn.includes(sc.id));
+    updateCta(sc.id);
     if (i > 0) sound.chime();
     updateProgress();
+  }
+
+  /* Contact card: message follows the scene (texts live in CTA_MESSAGES in config.js) */
+  function updateCta(id) {
+    const m = (typeof CTA_MESSAGES !== "undefined" && (CTA_MESSAGES[id] || CTA_MESSAGES.default)) || null;
+    const card = $("#ctaCard"); if (!m || !card) return;
+    if (card.dataset.msg === id) return;
+    card.dataset.msg = id; card.classList.add("swap");
+    setTimeout(() => { $("#ctaTag").textContent = m.tag; $("#ctaHead").textContent = m.head; $("#ctaSub").textContent = m.sub; card.classList.remove("swap"); }, 320);
   }
 
   function updateProgress() {
@@ -185,6 +196,7 @@
     stages.forEach(s => s.set(0, true));
     $("#presBar").style.width = "0%";
     $("#chapterCard").classList.remove("show");
+    $("#ctaCard").dataset.msg = "";
     if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
     window.scrollTo({ top: 0, behavior: "instant" });
     enterScene($("#intro"), { replay: true });
