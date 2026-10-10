@@ -139,7 +139,7 @@
     const card = $("#ctaCard"); if (!m || !card) return;
     if (card.dataset.msg === id) return;
     card.dataset.msg = id; card.classList.add("swap");
-    setTimeout(() => { $("#ctaTag").textContent = m.tag; $("#ctaHead").textContent = m.head; $("#ctaSub").textContent = m.sub; card.classList.remove("swap"); }, 320);
+    setTimeout(() => { $("#ctaHead").textContent = m.head; $("#ctaSub").textContent = m.sub; card.classList.remove("swap"); }, 320);
   }
 
   function updateProgress() {
